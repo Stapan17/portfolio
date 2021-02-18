@@ -182,6 +182,8 @@ nav ul li a:hover:before{
     }
     nav{
         position: fixed;
+        margin: 0;
+        padding: 0;
     }
     .hamburger1{
         position: fixed;
@@ -195,7 +197,7 @@ nav ul li a:hover:before{
         position: fixed;
         cursor: pointer;
         right: 3.2%;
-        top: 7%;
+        top: 6%;
         transform: translate(-9%,-90%);
         z-index: 2;
     }
@@ -203,18 +205,19 @@ nav ul li a:hover:before{
     .nav-links{
         position: fixed;
         display: flex;
-        position: fixed;
         background: crimson;
-        height: 100vh;
+        height: 50vh;
         width: 100%;
         flex-direction: column;
         clip-path: circle(100px at 90% -10%);
+        /* clip-path: circle(100%); */
         -webkit-clip-path: circle(100px at 90% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
     }
     .nav-links.open{
-        clip-path: circle(1000px at 90% -10%);
+        /* clip-path: circle(100%); */
+        clip-path: circle(1000px at 90% );
         -webkit-clip-path: circle(1000px at 90% -20%);
         pointer-events: all; 
     }
@@ -256,7 +259,7 @@ nav ul li a:hover:before{
 
 .home {
     display: flex;
-    background: url("./d.jpg") no-repeat center;
+    background: url("/d.jpg") no-repeat center;
     height: 100vh;
     color: white;
     min-height: 500px;
@@ -336,6 +339,24 @@ nav ul li a:hover:before{
     font-weight: 650;
 }
 
+.btnRead {
+    background-color: crimson;
+    padding: 10px 0;
+    color: white;
+    height: 50px;
+    margin-top: 20px;
+    width: 55%;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnRead:hover {
+    background-color: black;
+}
+
 .come {
     font-size: 25px;
     padding-top: 15px;
@@ -356,9 +377,9 @@ nav ul li a:hover:before{
     font-weight: 600;
     margin-bottom: 10px;
 }
-/* .skills .skills-content .left p{
+.skills .skills-content .left p{
     text-align: justify;
-} */
+}
 .skills .skills-content .left a{
     display: inline-block;
     background: crimson;
@@ -549,6 +570,9 @@ footer span a:hover{
         font-size: 35px;
         margin: 10px 120px;
     }
+    .max-width{
+        padding: 10px 50px;
+    }
 }
 
 @media (max-width: 1104px) {
@@ -570,77 +594,29 @@ footer span a:hover{
         font-size: 33px;
         margin: 10px 120px;
     }
+
+    .max-width{
+        padding: 10px 50px;
+    }
 }
 
 @media (max-width: 991px) {
     .max-width{
-        padding: 0 50px;
+        padding: 10px 50px;
+    }
+    .btnRead {
+    background-color: crimson;
+    padding: 10px 0;
+    color: white;
+    height: 50px;
+    margin-top: 20px;
+    width: 75%;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
     }
 }
-/* @media (max-width: 947px){ */
-    /* .menu-btn{
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before{
-        content: "\f00d";
-    }
-    .navbar .menu{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active{
-        left: 0;
-    }
-    .navbar .menu li{
-        display: block;
-    }
-    .navbar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-    .home .home-content .text-2{
-        font-size: 70px;
-    }
-    .home .home-content .text-3{
-        font-size: 35px;
-    }
-    .home .home-content a{
-        font-size: 23px;
-        padding: 10px 30px;
-    }
-    .max-width{
-        max-width: 930px;
-    }
-    .about .about-content .column{
-        width: 100%;
-    }
-    .about .about-content .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about .about-content .right{
-        flex: 100%;
-    }
-    .services .serv-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-    .skills .skills-content .column,
-    .contact .contact-content .column{
-        width: 100%;
-        margin-bottom: 35px;
-    } */
-/* } */
 
 @media (max-width: 790px) {
     .max-width{
@@ -660,6 +636,17 @@ footer span a:hover{
     }
     .skills .skills-content .column{
         width: calc(100% - 30px);
+    }
+
+    .hamburger1{
+        top: 7%;
+    }
+    .hamburger2{
+        top: 6%;
+    }
+
+    .addElem::after {
+        font-size: 50px;
     }
 }
 
@@ -689,16 +676,27 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+
+    .hamburger1{
+        top: 6%;
+    }
+    .hamburger2{
+        top: 6%;
+    }
+
+    .addElem::after {
+        font-size: 50px;
+    }
 }
 
 @media (max-width: 500px) {
     .home .home-content .text-2{
         font-size: 40px;
-        margin: 0 30px;
+        margin: 0 0;
     }
     .home .home-content .text-3{
         font-size: 25px;
-        margin: 5px 60px;
+        margin: 5px 0;
     }
     .about .about-content .right .text,
     .skills .skills-content .left .text{
@@ -735,4 +733,16 @@ footer span a:hover{
     .skills .skills-content .column{
         width: calc(100% - 30px);
     }
+
+    .hamburger1{
+        top: 6%;
+    }
+    .hamburger2{
+        top: 6%;
+    }
+
+    .addElem::after {
+        font-size: 50px;
+    }
+
 }
