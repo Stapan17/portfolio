@@ -214,6 +214,8 @@ nav ul li a:hover:before{
         -webkit-clip-path: circle(100px at 90% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
+        padding-top: 60px;
+
     }
     .nav-links.open{
         /* clip-path: circle(100%); */
