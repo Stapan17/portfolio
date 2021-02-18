@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -160,7 +161,7 @@ nav ul li a:hover:before{
 /* }  */
 
 .nav-links{
-    /* display: flex; */
+    display: flex;
     list-style: none;
     width: 100%;
     justify-content: space-around;
@@ -176,14 +177,14 @@ nav ul li a:hover:before{
 @media screen and (max-width:900px){
     .line{
         width: 30px;
-        height: 3px;
+        height: 3.5px;
         background: white;
         margin: 5px;
     }
     nav{
         position: fixed;
         margin: 0;
-        padding: 0;
+        /* padding: 0 20px 0 0; */
     }
     .hamburger1{
         position: fixed;
@@ -192,6 +193,7 @@ nav ul li a:hover:before{
         top: 5%;
         transform: translate(-9%,-90%);
         z-index: 2;
+        margin-right: 35px;        
     }
     .hamburger2{
         position: fixed;
@@ -206,8 +208,8 @@ nav ul li a:hover:before{
         position: fixed;
         display: flex;
         background: crimson;
-        height: 50vh;
-        width: 100%;
+        height: 55vh;
+        width: 88%;
         flex-direction: column;
         clip-path: circle(100px at 90% -10%);
         /* clip-path: circle(100%); */
@@ -215,7 +217,6 @@ nav ul li a:hover:before{
         transition: all 1s ease-out;
         pointer-events: none;
         padding-top: 60px;
-
     }
     .nav-links.open{
         /* clip-path: circle(100%); */
