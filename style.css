@@ -259,7 +259,7 @@ nav ul li a:hover:before{
 
 .home {
     display: flex;
-    background: url("./d.jpg") no-repeat center;
+    background: url("d.jpg") no-repeat center;
     height: 100vh;
     color: white;
     min-height: 500px;
