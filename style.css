@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
 }
 
 html{
@@ -46,7 +47,7 @@ html{
 }
 .scroll-up-btn.show{
     bottom: 30px;
-    opacity: 1;
+    opacity: 0.6;
     pointer-events: auto;
 }
 .scroll-up-btn:hover{
@@ -150,15 +151,8 @@ nav ul li a:hover:before{
     background: crimson;
 }
 .navbar.sticky a:hover{
-    /* padding: 2px 0; */
     color:black;
-    /* background-color: black; */
 } 
-
-/* nav{
-    height: 10vh;
-    /* background-color: crimson; */
-/* }  */
 
 .nav-links{
     display: flex;
@@ -182,18 +176,18 @@ nav ul li a:hover:before{
         margin: 5px;
     }
     nav{
-        position: fixed;
+        /* position: fixed; */
         margin: 0;
         /* padding: 0 20px 0 0; */
     }
     .hamburger1{
         position: fixed;
         cursor: pointer;
-        right: 3.2%;
-        top: 5%;
+        right: 5.2%;
+        top: 9%;
         transform: translate(-9%,-90%);
         z-index: 2;
-        margin-right: 35px;        
+        margin-right: 35px;
     }
     .hamburger2{
         position: fixed;
@@ -212,16 +206,13 @@ nav ul li a:hover:before{
         width: 88%;
         flex-direction: column;
         clip-path: circle(100px at 90% -10%);
-        /* clip-path: circle(100%); */
         -webkit-clip-path: circle(100px at 90% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
         padding-top: 60px;
     }
     .nav-links.open{
-        /* clip-path: circle(100%); */
-        clip-path: circle(1000px at 90% );
-        -webkit-clip-path: circle(1000px at 90% -20%);
+        clip-path: circle(100%);
         pointer-events: all; 
     }
     .nav-links li{
@@ -251,7 +242,7 @@ nav ul li a:hover:before{
 
     .addElem::after {
         position: relative;
-        content: "tapan";
+        content: "Tapan";
         top: 10%;
         padding-top: 30px;
         color: black;
@@ -474,7 +465,6 @@ nav ul li a:hover:before{
 .services .title::after,
 .teams .title::after{
     background: #111;
-    /* content: "what i"; */
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
@@ -485,9 +475,6 @@ nav ul li a:hover:before{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-/* .services .serv-content .card:hover{
-    background: crimson;
-} */
 .services .serv-content .card .box{
     transition: all 0.3s ease;
 }
@@ -736,16 +723,13 @@ footer span a:hover{
     .skills .skills-content .column{
         width: calc(100% - 30px);
     }
-
     .hamburger1{
         top: 6%;
     }
     .hamburger2{
         top: 6.6%;
     }
-
     .addElem::after {
-        font-size: 50px;
+        font-size: 40px;
     }
-
 }
