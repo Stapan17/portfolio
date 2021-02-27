@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 *{
     margin:0;
@@ -146,7 +148,7 @@ nav ul li a:hover:before{
     color: crimson;
 }
 .navbar.sticky{
-    padding: 2px 0;
+    padding: 3px 0;
     height: 10vh;
     background: crimson;
 }
@@ -193,9 +195,37 @@ nav ul li a:hover:before{
     color: white;
 }
 
+.name {
+    display: none;
+}
 
 @media screen and (max-width:900px){
 
+    .name {
+        display: inline;
+        float: right;
+    }
+
+    .name1 {
+        position: fixed;
+        top: 1.5vw;
+        right: 4%;
+        color:#000000;
+        font-weight: bold;
+        font-size: 8.2vw;
+        pointer-events: none;
+        font-family: 'Pacifico', cursive;
+        /* font-family: 'Lobster', cursive; */
+        /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    }
+
+    .navbar{
+        position: fixed;
+        /* padding: 5px 0; */
+        height: 10vh;
+        background: crimson;
+        content: "Tapan";
+    }
 
     .menu_box{
         display: block;
@@ -206,11 +236,11 @@ nav ul li a:hover:before{
     }
     .menu_open {
             display: block;
-            position: relative;
+            position: fixed;
             /* top: -8vw; */
             left:3vw;
             /* font-weight: bold; */
-            font-size:11vw;
+            font-size:12vw;
             color: #ffffff;
     }
 
@@ -220,6 +250,7 @@ nav ul li a:hover:before{
             left:3vw;
             font-size: 9vw;
             color:#ffffff;
+            padding-top: 2%;
     }    
     .menu_box {
             position: fixed;
@@ -248,7 +279,7 @@ nav ul li a:hover:before{
             /* color: white; */
             color: crimson;
             text-decoration: none;
-            font-size: 4.7vw;
+            font-size: 6vw;
             /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
         }
 
