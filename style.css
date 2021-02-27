@@ -168,87 +168,100 @@ nav ul li a:hover:before{
     text-decoration: none;
     font-size: 30px;
 }
+
+.menu_box{
+    display: none;
+}
+
+.menu_open {
+    display: none;
+    position: relative;
+    top: 0.15vw;
+    left: -1vw;
+    font-size: 4vw;
+    vertical-align: middle;
+    color: white;
+}
+
+.menu_close {
+    display: none;
+    position: relative;
+    top:0.15vw;
+    left: -1vw;
+    font-size: 4vw;
+    vertical-align:middle;
+    color: white;
+}
+
+
 @media screen and (max-width:900px){
-    .line{
-        width: 30px;
-        height: 3.5px;
-        background: white;
-        margin: 5px;
-    }
-    nav{
-        /* position: fixed; */
-        margin: 0;
-        /* padding: 0 20px 0 0; */
-    }
-    .hamburger1{
-        position: fixed;
-        cursor: pointer;
-        right: 5.2%;
-        top: 9%;
-        transform: translate(-9%,-90%);
-        z-index: 2;
-        margin-right: 35px;
-    }
-    .hamburger2{
-        position: fixed;
-        cursor: pointer;
-        right: 3.2%;
-        top: 6%;
-        transform: translate(-9%,-90%);
-        z-index: 2;
+
+
+    .menu_box{
+        display: block;
     }
 
-    .nav-links{
-        position: fixed;
-        display: flex;
-        background: crimson;
-        height: 55vh;
-        width: 88%;
-        flex-direction: column;
-        clip-path: circle(100px at 90% -10%);
-        -webkit-clip-path: circle(100px at 90% -10%);
-        transition: all 1s ease-out;
-        pointer-events: none;
-        padding-top: 60px;
+    #ham{
+        display: none;
     }
-    .nav-links.open{
-        clip-path: circle(100%);
-        pointer-events: all; 
-    }
-    .nav-links li{
-        opacity: 0;
-    }
-    .nav-links li a{
-        font-size: 30px;   
-    }
-    .nav-links li:nth-child(1){
-        transition: all 0.3s ease 0.2s;
-    }
-    .nav-links li:nth-child(2){
-        transition: all 0.3s ease 0.2s;
-    }
-    .nav-links li:nth-child(3){
-        transition: all 0.3s ease 0.2s;
-    }
-    li.fade{
-        opacity: 1;
-    }
-    .navbar a:hover {
-        color: white;
-    }
-    nav ul li a:before {
-        background: white;
+    .menu_open {
+            display: block;
+            position: relative;
+            /* top: -8vw; */
+            left:3vw;
+            /* font-weight: bold; */
+            font-size:11vw;
+            color: #ffffff;
     }
 
-    .addElem::after {
-        position: relative;
-        content: "Tapan";
-        top: 10%;
-        padding-top: 30px;
-        color: black;
-        font-size: 40px;
-        padding-left: 10px;
-    }
+    .menu_close {
+            position: relative;
+            /* top: -7vw; */
+            left:3vw;
+            font-size: 9vw;
+            color:#ffffff;
+    }    
+    .menu_box {
+            position: fixed;
+            top: 15vw;
+            /* top: 14.5vw; */
+            left: -80vw;
+            height:100vh;
+            width: 73vw;
+            /* background-color: rgba(45, 55, 65, 1); */
+            background-color:#ffffff;
+            box-shadow: 0px 1px 5px black;
+            transition: 0.2s ease;
+            overflow: scroll;
+            z-index: 1;
+        }
+
+        .menu_box nav {
+            margin: 3vw;
+            color: white;
+        }
+
+        .menu_box nav a {
+            padding: 2.5vw;
+            margin: 1vw;
+            display: block;
+            /* color: white; */
+            color: crimson;
+            text-decoration: none;
+            font-size: 4.7vw;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+        }
+
+        .menu_box nav a:active {
+            color: rgba(45, 55, 65, 1);
+            background-color:#BEB7DF;
+            color: #34113F;
+        }
+
+        .menu_box nav a:hover {
+            color: rgb(255, 255, 255);
+            background-color:#000000;
+        }
 }
 
 .home {
@@ -628,13 +641,6 @@ footer span a:hover{
         width: calc(100% - 30px);
     }
 
-    .hamburger1{
-        top: 7%;
-    }
-    .hamburger2{
-        top: 6%;
-    }
-
     .addElem::after {
         font-size: 50px;
     }
@@ -665,13 +671,6 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
-    }
-
-    .hamburger1{
-        top: 6%;
-    }
-    .hamburger2{
-        top: 6%;
     }
 
     .addElem::after {
@@ -722,12 +721,6 @@ footer span a:hover{
     }
     .skills .skills-content .column{
         width: calc(100% - 30px);
-    }
-    .hamburger1{
-        top: 6%;
-    }
-    .hamburger2{
-        top: 6.6%;
     }
     .addElem::after {
         font-size: 40px;

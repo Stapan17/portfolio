@@ -17,6 +17,19 @@
     <title>PORTFOLIO</title>
 </head>
 
+<script>
+    function menu_open() {
+        document.getElementById('menu_open').style = "display:none";
+        document.getElementById('menu_close').style = "display:block";
+        document.getElementById('menu_box').style = "left:-1.5vw";
+    }
+    function menu_close() {
+        document.getElementById('menu_open').style = "display:block";
+        document.getElementById('menu_close').style = "display:none";
+        document.getElementById('menu_box').style = "left:-80vw";
+    }
+</script>
+
 <body>
 
     <div class="scroll-up-btn">
@@ -24,23 +37,30 @@
     </div>
 
     <nav class="navbar">
-        <div class="hamburger hamburger1" id="vis">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="hamburger">
+            <span class="menu_open" id="menu_open" onclick="menu_open()">&#8801;</span>
+            <span class="menu_close" class="hamb" id="menu_close" onclick="menu_close()">&#10006;</span>
         </div>
-
         <center>
             <div class="max-width" id="ham">
                 <ul class="nav-links">
-                    <li><a href="#home" onclick="chk()">Home</a></li>
-                    <li><a href="#skills" onclick="chk()">Skills</a></li>
-                    <li><a href="#projects" onclick="chk()">Projects</a></li>
-                    <li><a href="#connect" onclick="chk()">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#connect">Contact</a></li>
                 </ul>
             </div>
         </center>
     </nav>
+
+    <div class="menu_box" id="menu_box">
+        <nav>
+            <a href="#home" id="l1" onclick="menu_close()">✪ &nbsp;HOME</a>
+            <a href="#skills" id="l2" onclick="menu_close()">✪ &nbsp;Skills</a>
+            <a href="#projects" id="l3" onclick="menu_close()">✪ &nbsp;Projects</a>
+            <a href="#connect" id="l5" onclick="menu_close()">✪ &nbsp;Connect with me</a>
+        </nav>
+    </div>
 
     <section class="home" id="home">
         <div class="max-width">
@@ -49,7 +69,8 @@
                 <div class="text-2">Tapan Savani</div>
                 <div class="text-3">And I'm <span class="typing"></span></div>
                 <a href="#" onclick="readMore()" id="btn_read">More About me</a>
-                <div class="dis" id="dis">I'm undergraduate student at IIITV.Doing my B.Tech in IT(2<sup>nd</sup>year).
+                <div class="dis" id="dis">I'm undergraduate student at IIITV.Doing my B.Tech in
+                    IT(2<sup>nd</sup>year).
                     I'm very much Passionate about devlopment and coding.
                 </div>
             </div>
@@ -197,10 +218,12 @@
     <center>
         <div class="connect" id="connect">
             <div class="txt">Connect with ME</div>
-            <a href="https://www.linkedin.com/in/tapan-savani-843a74194/" target="_blank"><img class="imageLogo" src="./linkedin.png"
+            <a href="https://www.linkedin.com/in/tapan-savani-843a74194/" target="_blank"><img class="imageLogo"
+                    src="./linkedin.png" alt=""></a>
+            <a href="https://twitter.com/tapansavani" target="_blank"><img class="imageLogo" src="./twitter1.png"
                     alt=""></a>
-            <a href="https://twitter.com/tapansavani" target="_blank"><img class="imageLogo" src="./twitter1.png" alt=""></a>
-            <a href="https://github.com/tapan17102001/" target="_blank"><img class="imageLogo" src="./github.png" alt=""></a>
+            <a href="https://github.com/tapan17102001/" target="_blank"><img class="imageLogo" src="./github.png"
+                    alt=""></a>
         </div>
     </center>
 
