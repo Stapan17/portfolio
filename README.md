@@ -1,3 +1,3 @@
 # portfolio
 
-https://tapan17102001.github.io/portfolio/
+https://stapan17.github.io/portfolio/
